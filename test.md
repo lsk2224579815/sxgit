@@ -29,6 +29,10 @@ $(document).ready(function () {
 ```
 <https://www.bnaidu.com>
 
-
+```javascript
+$(document).ready(function () {
+    alert('RUNOOB');
+});
+```
   
 
