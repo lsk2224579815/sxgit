@@ -22,6 +22,12 @@
 >1. 区块中使用序列1
 >>* 区块中使用序列1.2
 >2. 区块中使用序列2
+```javascript
+$(document).ready(function () {
+    alert('RUNOOB');
+});
+```
+<https://www.bnaidu.com>
 
 
   
