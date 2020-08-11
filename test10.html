@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../assets/js/jquery-3.5.1.js"></script>
+    <script>
+        function post1() {
+            var arr = ['X6-40-S738','X4-3-B642','X5-D2-119','X6-40-S739','X2-1-S705'];
+            $.ajax({
+                url: "http://127.0.0.1:51852/api/Values/GetJH",
+                type:"post",
+                traditional:true,
+                data: {jh:arr},
+                dataType: "json",
+                success: function (params) {
+                   if(params.status==200){
+                       alert("成功了！！！！！")
+                   }
+                    
+                }
+               
+            });
+        };
+        function post2() {
+            var arr = ['X6-40-S738','X4-3-B642','X5-D2-119','X6-40-S739','X2-1-S705'];
+            $.ajax({
+                url: "http://127.0.0.1:53413/api/Xm/GetJH",
+                type:"post",
+                traditional:true,
+                data: {jh:arr},
+                dataType: "json",
+                success: function (params) {
+                   if(params.status==200){
+                       console.info(params)
+                   }
+                    
+                }
+               
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="post1" onclick="post1()"><br>
+    <input type="button" value="post2" onclick="post2()">
+
+</body>
+
+</html>
